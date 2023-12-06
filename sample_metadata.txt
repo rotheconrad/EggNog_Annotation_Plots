@@ -1,0 +1,15 @@
+sample_contig_gene	MAG01
+sample_contig_gene	MAG01
+sample_contig_gene	MAG01
+sample_contig_gene	MAG01
+sample_contig_gene	MAG01
+sample_contig_gene	MAG01
+sample_contig_gene	MAG02
+sample_contig_gene	MAG02
+sample_contig_gene	MAG02
+sample_contig_gene	MAG02
+sample_contig_gene	MAG03
+sample_contig_gene	MAG03
+sample_contig_gene	MAG03
+sample_contig_gene	MAG03
+sample_contig_gene	MAG03

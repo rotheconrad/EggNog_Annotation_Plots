@@ -1,0 +1,58 @@
+## Annotation pipeline notes
+
+Starting with amino acid sequence fasta files (genes)
+
+1) check fasta sequence names. Each fasta file should have a unique identifier
+	(e.g. >file1_1_2 # XXX, >file2_1_2 # XXX, etc ...)
+	and each fasta sequence should have a unique identifier.
+	No duplicate fasta sequence names
+2) concatenate genes for each experimental group to create 1 fasta file per group.
+3) run mmseqs for each fasta file. Get the representative gene fasta file
+	this reduces the number of genes that need annotated (mmseqs.sbatch)
+	must install mmseqs (can use conda)
+4) run eggnog mapper for each representative gene file (each group)
+	(eggnog.sbatch). must install eggnog and the databases. (can use conda).
+5) use create_metadata.py to create the metadata file.
+	run script on each groups annotations file.
+	concatenate metadata files.
+6) run annotation_bar_plot.py
+
+
+
+COG Categories
+
+INFORMATION STORAGE AND PROCESSING
+[J] Translation, ribosomal structure and biogenesis
+[A] RNA processing and modification
+[K] Transcription
+[L] Replication, recombination and repair
+[B] Chromatin structure and dynamics
+
+CELLULAR PROCESSES AND SIGNALING
+[D] Cell cycle control, cell division, chromosome partitioning
+[Y] Nuclear structure
+[V] Defense mechanisms
+[T] Signal transduction mechanisms
+[M] Cell wall/membrane/envelope biogenesis
+[N] Cell motility
+[Z] Cytoskeleton
+[W] Extracellular structures
+[U] Intracellular trafficking, secretion, and vesicular transport
+[O] Posttranslational modification, protein turnover, chaperones
+[X] Mobilome: Prophages, Transposons
+
+METABOLISM
+[C] Energy production and conversion
+[G] Carbohydrate transport and metabolism
+[E] Amino acid transport and metabolism
+[F] Nucleotide transport and metabolism
+[H] Coenzyme transport and metabolism
+[I] Lipid transport and metabolism
+[P] Inorganic ion transport and metabolism
+[Q] Secondary metabolites biosynthesis, transport and catabolism
+
+POORLY CHARACTERIZED
+[R] General function prediction only
+[S] Function unknown
+
+
