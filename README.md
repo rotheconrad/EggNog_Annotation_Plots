@@ -1,9 +1,9 @@
 # EggNog_Annotation_Plots
  Create stack bar plots and perform chi2 tests from EggNog Mapper annotations file. The plots are a vectorized pdf files that can be opened in Adobe Illustrator or other for additional modification.
 
-![COG Categories Plot](https://github.com/rotheconrad/Kracken-Bracken-plot/tree/main/png/test_cog_categories.png)
+![COG Categories Plot](https://github.com/rotheconrad/EggNog_Annotation_Plots/blob/main/png/test_cog_categories.png)
 
-![Custom KEGG Paths Plot](https://github.com/rotheconrad/Kracken-Bracken-plot/tree/main/png/test_KEGG_paths_metabolism.png)
+![Custom KEGG Paths Plot](https://github.com/rotheconrad/EggNog_Annotation_Plots/blob/main/png/test_KEGG_paths_metabolism.png)
 
 ## Starting with amino acid sequence fasta files (genes)
 
