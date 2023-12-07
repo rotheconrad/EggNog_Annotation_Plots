@@ -52,23 +52,27 @@ def parse_kegg_hierarchy(i, o='kegg_lookup.tsv'):
 			if (X[0] == 'B') & (len(X) > 1): B = X[1]
 			if X[0] == 'C': C = X[2]
 			if X[0] == 'D':
-				# For D, there were a few entries in ko00001.keg that had an
-				# extra space or were missing the short gene name
-				# i deleted the space or added the ko as the short gene name
-				# to fix this.
-				x = X[4].split('; ')
-				ko = X[3]
-				name = x[0]
-				xx = x[1].split(' [')
-				long_name = xx[0]
-				# EC number
-				if len(xx) > 1:
-					ec = xx[1][:-1]
-				else: ec = 'n/a'
+				try:
+					# For D, there were a few entries in ko00001.keg that had an
+					# extra space or were missing the short gene name
+					# i deleted the space or added the ko as the short gene name
+					# to fix this.
+					x = X[4].split('; ')
+					ko = X[3]
+					name = x[0]
+					xx = x[1].split(' [')
+					long_name = xx[0]
+					# EC number
+					if len(xx) > 1:
+						ec = xx[1][:-1]
+					else: ec = 'n/a'
 
-				D = f'{ko}\t{name}\t{long_name}\t{ec}'
-				
-				q.write(f'{A}\t{B}\t{C}\t{D}\n')
+					D = f'{ko}\t{name}\t{long_name}\t{ec}'
+					
+					q.write(f'{A}\t{B}\t{C}\t{D}\n')
+
+				except:
+					print(f'\n\nError for: {l}')
 
 
 def main():
