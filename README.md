@@ -21,9 +21,16 @@ Starting with amino acid sequence fasta files (genes)
 
 4) run eggnog mapper for each representative gene file (each group) (see eggnog.sbatch). must install eggnog and the databases. (can use conda).
 
-5) use create_metadata.py to create the metadata file. run script on each groups annotations file. concatenate metadata files. concatenate annotations files.
+5) use create_metadata.py to create the metadata file. run script on each groups annotations file. concatenate metadata files. concatenate annotations files. (You can have more than two groups).
 
-6) run annotation_bar_plot.py
+6) run annotation_bar_plot.py.
+
+Figure height and width can be adjusted for each figure:
+
+* COG Categories line 355
+* COG Classes line 392
+* KEGG Modules line 457
+* KEGG Paths line 505
 
 ```bash
 python scripts/create_metadata.py -h
