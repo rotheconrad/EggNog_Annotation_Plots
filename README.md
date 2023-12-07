@@ -1,13 +1,21 @@
 # EggNog_Annotation_Plots
  Create stack bar plots and perform chi2 tests from EggNog Mapper annotations file. The plots are a vectorized pdf files that can be opened in Adobe Illustrator or other for additional modification.
 
+![COG Categories Plot](https://github.com/rotheconrad/Kracken-Bracken-plot/blob/main/png/test_cog_categories.png)
+
+![Custom KEGG Paths Plot](https://github.com/rotheconrad/Kracken-Bracken-plot/blob/main/png/test_KEGG_paths_metabolism.png)
+
 ## Starting with amino acid sequence fasta files (genes)
 
 1) check fasta sequence names. Each fasta file should have a unique identifier (e.g. >file1_1_2 # XXX, >file2_1_2 # XXX, etc ...) and each fasta sequence should have a unique identifier. No duplicate fasta sequence names
 
 2) concatenate genes for each experimental group to create 1 fasta file per group. Experimental groups can be a single genome/MAG or metagenome, or several.
 
-3) run mmseqs for each experimental group fasta file. Get the representative gene fasta file from mmseqs output. this reduces the number of genes that need annotated (see mmseqs.sbatch). must install mmseqs (can use conda). 
+3) run mmseqs for each experimental group fasta file. Get the representative gene fasta file from mmseqs output. this reduces the number of genes that need annotated (see mmseqs.sbatch). must install mmseqs (can use conda).
+
+* we suggest 90% AA ID gene clusters for species level analysis to capture fast evolving genes of the genome, in addition to the remaining genes.
+
+* We suggest 40% AA ID gene clusters for protein-family-level analysis.
 
 4) run eggnog mapper for each representative gene file (each group) (see eggnog.sbatch). must install eggnog and the databases. (can use conda).
 
