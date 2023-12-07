@@ -5,7 +5,9 @@
 
 ![Custom KEGG Paths Plot](https://github.com/rotheconrad/EggNog_Annotation_Plots/blob/main/png/test_KEGG_paths_metabolism.png)
 
-## Starting with amino acid sequence fasta files (genes)
+## General Usage
+
+Starting with amino acid sequence fasta files (genes)
 
 1) check fasta sequence names. Each fasta file should have a unique identifier (e.g. >file1_1_2 # XXX, >file2_1_2 # XXX, etc ...) and each fasta sequence should have a unique identifier. No duplicate fasta sequence names
 
