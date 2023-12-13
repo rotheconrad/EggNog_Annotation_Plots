@@ -84,7 +84,7 @@ Default KEGG plot behavior is to plot a set of standard modules. If any modules 
 * [W] Extracellular structures
 * [U] Intracellular trafficking, secretion, and vesicular transport
 * [O] Posttranslational modification, protein turnover, chaperones
-* [X] Mobilome: Prophages, Transposons
+* \[X] Mobilome: Prophages, Transposons
 
 #### METABOLISM
 
