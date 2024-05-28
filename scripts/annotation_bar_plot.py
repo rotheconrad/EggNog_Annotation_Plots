@@ -17,6 +17,15 @@ or supply a second optional file of KEGG paths for a fourth figure. The
 KEGG Path file is limited to 27 at a time. By default the top 27 paths
 are shown.
 
+Mobile [X]
+Metabolism 2 [P], [Q]
+Metabolism 1 [C], [G], [E], [F], [H], [I]
+Cellular [D], [Y], [V], [T], [M], [N], [Z], [W], [U], [O]
+Information [A], [K], [L], [B]
+Ribosomal [J]
+Conserved Hypothetical [R], [S]
+Hypothetical [n/a - not assigned]
+
 If an annotation category doesn't show up on the plot, it is because
 that category was not found in the annotation data provided.
 
@@ -284,8 +293,9 @@ def plot_annotation_barplot(adf, title, colors, outfile, W, H):
     ax.annotate(ptots[1], (1, 1.02), transform=ax.transAxes, ha='center')
 
     # annotate individual percents and add asterisk if significant post hoc
-    # double the corrected p value array since our plot has two columns
-    sig = [i for i in pvals_corrected for _ in range(2)]
+    # multiply the corrected p value array to match adf column count
+    col_count = len(adf.columns)
+    sig = [i for i in pvals_corrected for _ in range(col_count)]
     for i, p in enumerate(ax.patches):
         width, height = p.get_width(), p.get_height()
         x, y = p.get_xy()

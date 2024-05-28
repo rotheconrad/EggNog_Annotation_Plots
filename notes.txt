@@ -12,6 +12,7 @@ Starting with amino acid sequence fasta files (genes)
 	must install mmseqs (can use conda)
 4) run eggnog mapper for each representative gene file (each group)
 	(eggnog.sbatch). must install eggnog and the databases. (can use conda).
+	concatenate emapper.annotations files
 5) use create_metadata.py to create the metadata file.
 	run script on each groups annotations file.
 	concatenate metadata files.
@@ -20,6 +21,15 @@ Starting with amino acid sequence fasta files (genes)
 
 
 COG Categories
+
+Mobile [X]
+Metabolism 2 [P], [Q]
+Metabolism 1 [C], [G], [E], [F], [H], [I]
+Cellular [D], [Y], [V], [T], [M], [N], [Z], [W], [U], [O]
+Information [A], [K], [L], [B]
+Ribosomal [J]
+Conserved Hypothetical [R], [S]
+Hypothetical [n/a - not assigned]
 
 INFORMATION STORAGE AND PROCESSING
 [J] Translation, ribosomal structure and biogenesis

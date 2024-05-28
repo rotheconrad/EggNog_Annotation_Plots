@@ -64,6 +64,15 @@ Default KEGG plot behavior is to plot a set of standard modules. If any modules 
 
 # COG Categories
 
+* Mobile [X]
+* Metabolism 2 [P], [Q]
+* Metabolism 1 [C], [G], [E], [F], [H], [I]
+* Cellular [D], [Y], [V], [T], [M], [N], [Z], [W], [U], [O]
+* Information [A], [K], [L], [B]
+* Ribosomal [J]
+* Conserved Hypothetical [R], [S]
+* Hypothetical [n/a - not assigned]
+
 #### INFORMATION STORAGE AND PROCESSING
 
 * [J] Translation, ribosomal structure and biogenesis
